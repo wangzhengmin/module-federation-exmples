@@ -1,9 +1,16 @@
 <template>
   <div class="header">
     <span>header</span>
+    <span>{{ count }}</span>
   </div>
 </template>
 
+<script setup>
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+const store = useStore();
+const count = computed(()=>store?.state?.count)
+</script>
 <style scoped>
 .header {
   display: flex;
