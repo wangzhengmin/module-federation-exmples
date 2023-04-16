@@ -8,8 +8,12 @@ module.exports = {
   entry: "./src/index.js",
   mode: "development",
   devServer: {
-    port: 8081,
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    port: 8083,
     hot: true,
+    historyApiFallback: true,
   },
   output: {
     publicPath: "auto",
@@ -31,16 +35,15 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "remote",
-      filename: "remoteEntry.js",
+      name: "shell",
+      filename: "shellEntry.js",
       shared: {
         vuex: { singleton: true, requiredVersion: deps.vuex },
         vue: { singleton: true, requiredVersion: deps.vue },
       },
       exposes: {
-        "./Header": "./src/Header.vue",
-        "./routes": "./src/router/routes.js",
-        "./App": "./src/App.vue",
+        "./store": "./src/store",
+        "./Footer": "./src/Footer.vue",
       },
     }),
   ],

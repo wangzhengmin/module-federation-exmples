@@ -4,17 +4,9 @@ import { createStore } from "vuex";
 import router from "./router"
 import Test from "./Test.vue";
 import remoteRoutes from "remote/routes";
+import "vuex";
 
-const store = createStore({
-  state: {
-    count: 1,
-  },
-  mutations: {
-    add(state) {
-      state.count++;
-    },
-  },
-});
+import store from "shell/store";
 
 router.addRoute({
   path:"/test",

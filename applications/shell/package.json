@@ -1,20 +1,17 @@
 {
-  "name": "ModuleFederation",
+  "name": "@app/shell",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "host": "pnpm -F @app/host dev",
-    "remote": "pnpm -F @app/remote dev",
-    "shell": "pnpm -F @app/shell dev",
-    "build:shell": "pnpm -F @app/shell build"
+    "dev": "webpack server",
+    "build": "webpack build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "vue": "^3.2.36",
-    "vue-router": "^4.0.13",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

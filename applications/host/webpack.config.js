@@ -7,17 +7,17 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, "dist"),
     },
     port: 8080,
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   output: {
-    publicPath: '/',
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -38,9 +38,14 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "host",
       remotes: {
-        remote: "remote@http://localhost:8081/remoteEntry.js"
+        remote: "remote@http://localhost:8081/remoteEntry.js",
+        shell: "shell@http://localhost:8083/shellEntry.js",
       },
-      shared: deps
+      shared: {
+
+        vuex: { singleton: true, requiredVersion: deps.vuex },
+        vue: { singleton: true, requiredVersion: deps.vue },
+      },
     }),
   ],
 };
