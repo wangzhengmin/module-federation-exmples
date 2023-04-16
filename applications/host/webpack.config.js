@@ -7,6 +7,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
+  devtool: 'inline-source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),

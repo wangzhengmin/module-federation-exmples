@@ -10,6 +10,7 @@
         <router-link to="/about">About</router-link> |
         <router-link to="/remote/home">Remote Home</router-link> |
         <router-link to="/remote/about">Remote About</router-link>
+        <router-link to="/test">test dynamic route</router-link>
       </div>
       <router-view />
     </div>
