@@ -11,12 +11,14 @@ importers:
       style-loader: ^3.3.2
       vue: ^3.2.36
       vue-loader: ^17.0.1
+      vue-router: ^4.0.13
       vuex: ^4.0.2
       webpack: ^5.79.0
       webpack-cli: ^5.0.1
       webpack-dev-server: ^4.13.2
     dependencies:
       vue: registry.npmmirror.com/vue/3.2.36
+      vue-router: registry.npmmirror.com/vue-router/4.0.13_vue@3.2.36
       vuex: registry.npmmirror.com/vuex/4.0.2_vue@3.2.36
     devDependencies:
       '@babel/core': registry.npmmirror.com/@babel/core/7.21.4
@@ -3536,6 +3538,18 @@ packages:
       vue: registry.npmmirror.com/vue/3.2.36
       webpack: registry.npmmirror.com/webpack/5.79.0_webpack-cli@5.0.1
     dev: true
+
+  registry.npmmirror.com/vue-router/4.0.13_vue@3.2.36:
+    resolution: {integrity: sha512-LmXrC+BkDRLak+d5xTMgUYraT3Nj0H/vCbP+7usGvIl9Viqd1UP6AsP0i69pSbn9O0dXK/xCdp4yPw21HqV9Jw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.0.13.tgz}
+    id: registry.npmmirror.com/vue-router/4.0.13
+    name: vue-router
+    version: 4.0.13
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.5.0
+      vue: registry.npmmirror.com/vue/3.2.36
+    dev: false
 
   registry.npmmirror.com/vue/3.2.36:
     resolution: {integrity: sha512-5yTXmrE6gW8IQgttzHW5bfBiFA6mx35ZXHjGLDmKYzW6MMmYvCwuKybANRepwkMYeXw2v1buGg3/lPICY5YlZw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue/-/vue-3.2.36.tgz}

@@ -32,7 +32,9 @@ module.exports = {
       filename: "remoteEntry.js",
       shared: deps,
       exposes: {
-        "./Header": "./src/Header.vue"
+        "./Header": "./src/Header.vue",
+        './routes': './src/router/routes.js',
+        './App': './src/App.vue',
       }
     }),
   ],
