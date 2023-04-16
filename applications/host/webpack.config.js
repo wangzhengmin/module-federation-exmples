@@ -38,13 +38,12 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "host",
       remotes: {
-        remote: "remote@http://localhost:8081/remoteEntry.js",
         shell: "shell@http://localhost:8083/shellEntry.js",
       },
       shared: {
-
         vuex: { singleton: true, requiredVersion: deps.vuex },
         vue: { singleton: true, requiredVersion: deps.vue },
+        "vue-router": { singleton: true, requiredVersion: deps["vue-router"] },
       },
     }),
   ],

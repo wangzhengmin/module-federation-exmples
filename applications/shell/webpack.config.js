@@ -40,10 +40,12 @@ module.exports = {
       shared: {
         vuex: { singleton: true, requiredVersion: deps.vuex },
         vue: { singleton: true, requiredVersion: deps.vue },
+        "vue-router": { singleton: true, requiredVersion: deps["vue-router"] },
       },
       exposes: {
         "./store": "./src/store",
-        "./Footer": "./src/Footer.vue",
+        "./Layout": "./src/Layout.vue",
+        "./routes": "./src/router/routes",
       },
     }),
   ],

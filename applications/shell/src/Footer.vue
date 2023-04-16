@@ -1,18 +1,11 @@
 <template>
   <div class="footer">
-    <span>Footer</span>
-    <span>{{ count }}</span>
+    <span>Shell Footer</span>
   </div>
 </template>
-
-<script setup>
-import { computed } from 'vue';
-import { useStore } from 'vuex';
-const store = useStore();
-const count = computed(()=>store?.state?.count)
-</script>
 <style scoped>
 .footer {
+  flex: 0 0 auto;
   display: flex;
   justify-content: space-between;
   height: 50px;

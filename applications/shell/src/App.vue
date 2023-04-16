@@ -1,10 +1,3 @@
 <template>
-  <div class="container">
-    
-    <h2>这是一个 shell app</h2>
-  
-  <Footer />
-  </div>
+  <router-view></router-view>
 </template>
-<script setup>
-</script>

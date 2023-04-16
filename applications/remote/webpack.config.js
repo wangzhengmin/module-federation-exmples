@@ -36,11 +36,13 @@ module.exports = {
       shared: {
         vuex: { singleton: true, requiredVersion: deps.vuex },
         vue: { singleton: true, requiredVersion: deps.vue },
+        "vue-router": { singleton: true, requiredVersion: deps["vue-router"] },
+      },
+      remotes: {
+        shell: "shell@http://localhost:8083/shellEntry.js",
       },
       exposes: {
-        "./Header": "./src/Header.vue",
         "./routes": "./src/router/routes.js",
-        "./App": "./src/App.vue",
       },
     }),
   ],
